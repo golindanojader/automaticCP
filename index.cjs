@@ -24,14 +24,26 @@ cron.schedule('* * * * *', () => {
     
     });
 
-   
-      
+      const token = generarToken();
+
        
-        fs.writeFile(filePath, new Date().toISOString(), function (err){})
+        fs.writeFile(filePath, new Date().toISOString() + token, function (err){})
 	   // fs.appendFile(filePath, count, function (err) {if (err) throw err;});
 	   
 
 
 });
 
-console.log('Tarea programada para ejecutarse cada minuto');
+function generarToken(longitud = 10000) {
+    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{};:,.<>?';
+    let token = '';
+
+    for (let i = 0; i < longitud; i++) {
+        const index = Math.floor(Math.random() * caracteres.length);
+        token += caracteres.charAt(index);
+    }
+
+    return token;
+}
+
+
