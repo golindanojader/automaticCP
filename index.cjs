@@ -12,12 +12,12 @@ cron.schedule('* * * * *', () => {
 
     
     //genero un commit con la fecha y hora actual
-    exec('cd C:/laragon/www/lavieja && git add . && git commit -m "Commit automático: ' + new Date().toISOString() + '"', (err, stdout, stderr) => {
+    exec('cd C:/laragon/www/script && git add . && git commit -m "Commit automático: ' + new Date().toISOString() + '"', (err, stdout, stderr) => {
         if (err) console.error(`Error: ${err.message}`); });
 
     console.log('Ejecutando git push...');
     
-    exec('cd C:/laragon/www/lavieja && git push origin main', (err, stdout, stderr) => {
+    exec('cd C:/laragon/www/script && git push origin main', (err, stdout, stderr) => {
         if (err) console.error(`Error: ${err.message}`);
         if (stdout) console.log(`Salida: ${stdout}`);
         if (stderr) console.error(`Error estándar: ${stderr}`);
