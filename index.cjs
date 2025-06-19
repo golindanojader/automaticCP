@@ -6,7 +6,7 @@ const { exec } = require('child_process');
 
 const filePath = 'request.txt';
 
-cron.schedule('* * * * *', () => {
+cron.schedule('*/59 * * * *', () => {
 
     console.log('Ejecutando git commit...');
 
