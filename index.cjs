@@ -21,7 +21,7 @@ cron.schedule('* * * * *', () => {
         if (err) console.error(`Error: ${err.message}`);
         if (stdout) console.log(`Salida: ${stdout}`);
         if (stderr) console.error(`Error estándar: ${stderr}`);
-        console.log(err)
+      
     });
 
       const token = generarToken();
