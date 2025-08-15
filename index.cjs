@@ -42,7 +42,7 @@ function generarToken(longitud = 10000) {
         const index = Math.floor(Math.random() * caracteres.length);
         token += caracteres.charAt(index);
     }
-faro
+
     return token;
 }
 
