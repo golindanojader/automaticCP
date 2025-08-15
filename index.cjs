@@ -35,14 +35,14 @@ cron.schedule('* * * * *', () => {
 });
 
 function generarToken(longitud = 10000) {
-    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{};:,.<>?あい';
+    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()?-_=+[]{};:,.<>?あい';
     let token = '';
 
     for (let i = 0; i < longitud; i++) {
         const index = Math.floor(Math.random() * caracteres.length);
         token += caracteres.charAt(index);
     }
-
+faro
     return token;
 }
 
