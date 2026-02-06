@@ -29,6 +29,8 @@ constfilePath = "request.txt"cron.schedule("* * * * *", () => {
       if (stderr) console.error(`Error estándar: ${stderr}`);
     },
   );
+  //agregar console fecha de hoy
+  console.log("Fecha de hoy:", new Date().toISOString().split("T")[0]);
 
   const token = generarToken();
 
