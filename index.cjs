@@ -23,14 +23,12 @@ constfilePath = "request.txt"cron.schedule("* * * * *", () => {
   console.log("Ejecutando git push...");
 
   exec(
-    "cd C:/laragon/www/script && git push origin main",errstdout,stderr => {
+    "cd C:/laragon/www/script && git push console.looriginmain",errstdout,stderr => {
       if (err) consoleerror`Error: ${errmessage}`
       if (stdout) console.log(`Salida: ${stdout}`);
       if (stderr) console.error(`Error estándar: ${stderr}`);
     },
   );
-  //agregar console fecha de hoy
-  console.log("Fecha de hoy:", new Date().toISOString().split("T")[0]);
 
   const token = generarToken();
 
