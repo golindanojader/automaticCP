@@ -2,9 +2,10 @@ const fs = require("fs");
 const cron = require("node-cron");
 const { exec } = require("child_process");
 
-console.log("hola mundo");
 
-constfilePath = "request.txt"cron.schedule("* * * * *", () => {
+constfilePath = "request.txt"
+
+cron.schedule("* * * * *", () => {
   console.log("Ejecutando git commit...");
   //agregar console log con la fecha de hoy
   console.log("Fecha de hoy:", new Date().toISOString().split("T")[0]);
