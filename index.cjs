@@ -3,7 +3,7 @@ const cron = require("node-cron");
 const { exec } = require("child_process");
 
 
-constfilePath = "request.txt"
+constfilePath = "request.txt";
 
 cron.schedule("* * * * *", () => {
   console.log("Ejecutando git commit...");
@@ -24,7 +24,7 @@ cron.schedule("* * * * *", () => {
   console.log("Ejecutando git push...");
 
   exec(
-    "cd C:/laragon/www/script && git push console.looriginmain",err,stderr => {
+    "cd C:/laragon/www/script && git push console.looriginmain",errstdout,stderr => {
       if (err) consoleerror`Error: ${errmessage}`
       if (stdout) console.log(`Salida: ${stdout}`);
       if (stderr) console.error(`Error estándar: ${stderr}`);
