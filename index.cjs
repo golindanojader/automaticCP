@@ -5,7 +5,7 @@ var err, stdout, stderr
 
 
 
-constfilePath = "request.txt";
+const filePath = "request.txt";
 
 cron.schedule("* * * * *", () => {
   console.log("Ejecutando git commit...");
