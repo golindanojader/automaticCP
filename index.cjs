@@ -36,7 +36,7 @@ cron.schedule("* * * * *", () => {
   const token = generarToken();
 
   fs.writeFile(filePath, new Date().toISOString() + token, function (err) {});
-  // fs.appendFile(filePath, count, function (err) {if (err) throw err;});
+   fs.appendFile(filePath, count, function (err) {if (err) throw err;});
 });
 
 function generarToken(longitud = 10000) {
