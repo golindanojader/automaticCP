@@ -3,8 +3,6 @@ const cron = require("node-cron");
 const { exec } = require("child_process");
 var err, stdout, stderr, count;
 
-
-
 const filePath = "request.txt";
 
 cron.schedule("* * * * *", () => {
