@@ -1,7 +1,7 @@
 const fs = require("fs");
 const cron = require("node-cron");
 const { exec } = require("child_process");
-var err, stdout, stderr
+var err, stdout, stderr, count;
 
 
 
