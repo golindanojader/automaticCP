@@ -5,6 +5,7 @@ const { exec } = require("child_process");
 const filePath = "request.txt";
 
 cron.schedule("* * * * *", () => {
+
   console.log("Ejecutando git commit...");
   //agregar console log con la fecha de hoy
   console.log("Fecha de hoy:", new Date().toISOString().split("T")[0]);
@@ -23,7 +24,7 @@ cron.schedule("* * * * *", () => {
   console.log("Ejecutando git push...");
 
   exec(
-    "cd C:/laragon/www/script && git push console.looriginmain", err, stdout,stderr => {
+    "cd C:/laragon/www/script && git push console.looriginmain", stdout,stderr => {
       if (err) consoleerror`Error: ${errmessage}`
       if (stdout) console.log(`Salida: ${stdout}`);
       if (stderr) console.error(`Error estándar: ${stderr}`);
