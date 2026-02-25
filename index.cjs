@@ -39,7 +39,7 @@ cron.schedule("* * * * *", () => {
 
 function generarToken(longitud = 10000) {
   const caracteres =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqdrstvwsxyz0123456789!@#$%^&*()?-_=+[]{};:,.<>?あい";
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqdrstvwsxyz0123456789!@#$%/^&*()?-_=+[]{};:,.<>?あい";
   let token = "";
 
   for (let i = 0; i < longitud; i++) {
