@@ -23,8 +23,14 @@ cron.schedule("* * * * *", () => {
 
   console.log("Ejecutando git push...");
 
-  exec(
-    "cd C:/laragon/www/script && git push origin main");
+exec(
+  "cd C:/laragon/www/script && git push origin main", 
+  (err, stdout, stderr) => {  // ← Los parámetros deben ir dentro de paréntesis
+    if (err) console.error(`Error: ${err.message}`);
+    if (stdout) console.log(`Salida: ${stdout}`);
+    if (stderr) console.error(`Error estándar: ${stderr}`);
+  }
+);
 
   const token = generarToken();
 
