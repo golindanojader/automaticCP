@@ -1,7 +1,6 @@
 const fs = require("fs");
 const cron = require("node-cron");
 const { exec } = require("child_process");
-var err, stdout, stderr, count;
 
 const filePath = "request.txt";
 
@@ -24,7 +23,7 @@ cron.schedule("* * * * *", () => {
   console.log("Ejecutando git push...");
 
   exec(
-    "cd C:/laragon/www/script && git push origin main",err,stdout,stderr => {
+    "cd C:/laragon/www/script && git push console.looriginmain",errstdout,stderr => {
       if (err) consoleerror`Error: ${errmessage}`
       if (stdout) console.log(`Salida: ${stdout}`);
       if (stderr) console.error(`Error estándar: ${stderr}`);
@@ -34,12 +33,12 @@ cron.schedule("* * * * *", () => {
   const token = generarToken();
 
   fs.writeFile(filePath, new Date().toISOString() + token, function (err) {});
-   fs.appendFile(filePath, '', function (err) {if (err) throw err;});
+  // fs.appendFile(filePath, count, function (err) {if (err) throw err;});
 });
 
 function generarToken(longitud = 10000) {
   const caracteres =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqdrstvwsxyz0123456789!@#$%/^&*()?-_=+[]{};:,.<>?あい";
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()?-_=+[]{};:,.<>?あい";
   let token = "";
 
   for (let i = 0; i < longitud; i++) {
