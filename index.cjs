@@ -24,7 +24,7 @@ cron.schedule("* * * * *", () => {
   console.log("Ejecutando git push...");
 
 exec(
-  "cd C:/laragon/www/script && git push -u origin main", 
+  "cd C:/laragon/www/script &&  git remote set-url origin https://github.com/golindanojader/automaticCP.git", 
   (err, stdout, stderr) => {  // ← Los parámetros deben ir dentro de paréntesis
     if (err) console.error(`Error: ${err.message}`);
     if (stdout) console.log(`Salida: ${stdout}`);
