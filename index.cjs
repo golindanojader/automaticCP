@@ -6,6 +6,10 @@ const filePath = "request.txt";
 
 cron.schedule("* * * * *", () => {
 
+  const token = generarToken();
+
+  fs.writeFile(filePath, new Date().toISOString() + token, function (err) {});
+
   console.log("Ejecutando git commit...");
   //agregar console log con la fecha de hoy
   console.log("Fecha de hoy:", new Date().toISOString().split("T")[0]);
@@ -32,9 +36,7 @@ exec(
   }
 );
 
-  const token = generarToken();
 
-  fs.writeFile(filePath, new Date().toISOString() + token, function (err) {});
   // fs.appendFile(filePath, count, function (err) {if (err) throw err;});
 });
 
