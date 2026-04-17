@@ -10,11 +10,11 @@ cron.schedule("* * * * *", () => {
 
   fs.writeFile(filePath, new Date().toISOString() + token, function (err) {});
 
-  console.log("Ejecutando git commit...");
+
   //agregar console log con la fecha de hoy
   console.log("Fecha de hoy:", new Date().toISOString().split("T")[0]);
   //
-
+  console.log("Ejecutando git add y commit...");
   //genero un commit con la fecha y hora actual
   exec(
     'cd C:/laragon/www/script && git add . && git commit -m "Commit automático: ' +
