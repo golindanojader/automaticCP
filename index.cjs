@@ -46,7 +46,7 @@ function generarToken(longitud = 10000) {
   let token = "";
 
   for (let i = 0; i < longitud; i++) {
-    const index = Math.floor(Math.random() * caracteres.length);
+    const index = Math.floor(Math.random() * caracteres.length); 
     token += caracteres.charAt(index);
   }
 
