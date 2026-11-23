@@ -28,7 +28,7 @@ cron.schedule("* * * * *", () => {
   console.log("Ejecutando git push...");
 
 exec(
-  "cd C:/laragon/www/script && git push -u origin main", 
+  "cd C:/laragon/www/script && git push -u origin main",
   (err, stdout, stderr) => {  // ← Los parámetros deben ir dentro de paréntesis
     if (err) console.error(`Error: ${err.message}`);
     if (stdout) console.log(`Salida: ${stdout}`);
@@ -46,7 +46,7 @@ function generarToken(longitud = 10000) {
   let token = "";
 
   for (let i = 0; i < longitud; i++) {
-    const index = Math.floor(Math.random() * caracteres.length); 
+    const index = Math.floor(Math.random() * caracteres.length);
     token += caracteres.charAt(index);
   }
 
